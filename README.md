@@ -25,16 +25,18 @@ The car is able to drive around the track satisfying all the requirements mentio
 The output of the path planner is to provide a list of waypoints to be tracked by the controller. Below is a description of how this path is generated.
 
 **The path consists of 50 waypoints**
+
 1-A list of widely sparsed waypoints were created using the waypoints of the previous path.
 
 2-The rest of the 50 waypoints are sampled from a spline.
 
 **Lane Changes**
+
 1-The car changes it's lane when there is a car infront which is slower, and it's safe to change lanes.
 
 2-Left lanes are preferable than right lanes, so if a car infront is slower and the left lane is safe, the car will move to the left lane. If the left lane is not safe the car will move to the right lane if it is safe.
 
-## TODO
+### TODO
 1-Refactor code and encapsulate the main code in a Path Planner Class
 
 2-if it's ok to changed to both adjacent lanes, calculate a cost function for each one of them and choose the lane change with least cost.
